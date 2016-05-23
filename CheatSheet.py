@@ -110,3 +110,4 @@ list1 = [1,2,3]
 list2 = [1,2,3]
 print (x == y) #will be true because '==' matches values in list to see if =
 print (x is y)
+#sup nigge
