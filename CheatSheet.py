@@ -99,7 +99,7 @@ if name in ["John", "Rick"]:
     print ("your name is either John or Rick")#Checks to see if the var is in some list
 
 #if statements
-#x = 2
+#d = 2
 if x == 2: #need boolean equals
     print ("x equals 2")
 else:
@@ -109,4 +109,94 @@ else:
 list1 = [1,2,3]
 list2 = [1,2,3]
 print (x == y) #will be true because '==' matches values in list to see if =
-print (x is y)
+print (x is y) #prints out False
+
+#not operator
+print (not False) #prints out true
+print ((not False) == (False) #Prints out False
+
+#Loops-----------------------------------------------------------------------------------------------------------------
+#for loops
+primes = [2, 3, 5, 7]
+for prime in primes 
+    print (prime)
+    
+#prints out the numbers 0,1,2,3,4
+for x in xrange(5): #or range(5)
+    print x
+    
+#print out 3,4,5
+for x in xrange (3, 6): #or range (3, 6)
+    print x
+
+#print out 3,5,7
+for x xrange(3, 8, 2): #or range(3, 8, 2)
+    print x
+
+#while loops
+#print out 0,1,2,3,4
+count = 0 
+while count < 5
+    print (count)
+    count += 1 #same as count = count + 1 (or you can do count++)
+
+#break and continue statements    
+#prints out 0,1,2,3,4
+count = 0
+while True:
+    print count 
+    count += 1
+    if count >= 5:
+        break
+
+#print out only odd numbers - 1,3,5,7,9
+for x in xrange(10):
+    #checks if x is even
+    if x % 2 == 0:
+        continue
+    print (x)
+
+#prints out 0,1,2,3,4 and then it prints 'count value reached 5'
+
+count = 0
+while(count<5):
+    print count
+    count += 1
+else: 
+    print ("count value reached %d" %count)
+    
+#print out 1,2,3,4
+for i in xrange(1,10):
+    if (i % 5 == 0):
+        break
+    print (i)
+else: 
+    print ("this is not printed because for loop is terminated because of break but not due to fail in condition")
+
+#Functions---------------------------------------------------------------------------------------------------------------------------------------
+def myFunction():
+    print ("Hello form my function!")
+    
+def functionWithArgs(username, greeting):
+    print("hey, %s, from my function! I wish you %s" %(username, greeting)
+    
+def sumTwoNumbers(a, b):
+    return a + b
+
+#prints the greetings and the sum
+myFunction()
+
+functionWithArgs("john", "fuck you")
+
+w = sumTwoNumbers(2,3)
+print (w)
+
+
+
+    
+    
+    
+    
+
+
+
