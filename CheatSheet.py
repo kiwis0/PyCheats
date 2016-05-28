@@ -236,13 +236,28 @@ print (car2.description())
 
 #Dictionaries---------------------------------------------------------------------------------------
 
+phoneBook = {}
+phoneBook["John"] = 1234567
+phoneBook["Jack"] = 9383772
+phoneBook["Jill"] = 9476627
 
+''' 
+#you can also initialize dictionaries like this 
+#this is the same thing as ^^^
+phoneBook = {
+    "John" : 938477566,
+    "Jack" : 938377264,
+    "Jill" : 947662781
+}
 
+'''
+#iterates over values in phoneBook
+for name, number in phoneBook.items():
+    print ("Phone number of %s is %d" % (name, number))
 
-    
-    
-    
-    
+#removing values
+del phoneBook['John']
+#or 'phoneBook.pop("John")'
 
 
 
