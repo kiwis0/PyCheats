@@ -113,30 +113,30 @@ print (x is y) #prints out False
 
 #not operator
 print (not False) #prints out true
-print ((not False) == (False) #Prints out False
+print ((not False) == (False)) #Prints out False
 
 #Loops-----------------------------------------------------------------------------------------------------------------
 #for loops
-primes = [2, 3, 5, 7]
-for prime in primes 
-    print (prime)
-    
 #prints out the numbers 0,1,2,3,4
-for x in xrange(5): #or range(5)
-    print x
+for x in range(5):#or range(5)
+    print (x)
     
+primes = [2, 3, 5, 7]
+for prime in primes: 
+    print (prime)
+        
 #print out 3,4,5
-for x in xrange (3, 6): #or range (3, 6)
-    print x
+for x in range (3, 6): #or range (3, 6)
+    print (x)
 
 #print out 3,5,7
-for x xrange(3, 8, 2): #or range(3, 8, 2)
-    print x
+for x in range(3, 8, 2): #or range(3, 8, 2)
+    print (x)
 
 #while loops
 #print out 0,1,2,3,4
 count = 0 
-while count < 5
+while count < 5:
     print (count)
     count += 1 #same as count = count + 1 (or you can do count++)
 
@@ -144,13 +144,13 @@ while count < 5
 #prints out 0,1,2,3,4
 count = 0
 while True:
-    print count 
+    print (count) 
     count += 1
     if count >= 5:
         break
 
 #print out only odd numbers - 1,3,5,7,9
-for x in xrange(10):
+for x in range(10):
     #checks if x is even
     if x % 2 == 0:
         continue
@@ -160,13 +160,14 @@ for x in xrange(10):
 
 count = 0
 while(count<5):
-    print count
+    print (count)
     count += 1
 else: 
-    print ("count value reached %d" %count)
+    print ("count value reached %d" 
+           %count)
     
 #print out 1,2,3,4
-for i in xrange(1,10):
+for i in range(1,10):
     if (i % 5 == 0):
         break
     print (i)
@@ -175,10 +176,10 @@ else:
 
 #Functions---------------------------------------------------------------------------------------------------------------------------------------
 def myFunction():
-    print ("Hello form my function!")
+    print ("Hello from my function!")
     
 def functionWithArgs(username, greeting):
-    print("hey, %s, from my function! I wish you %s" %(username, greeting)
+    print("hey, %s, from my function! I wish i could %s" %(username, greeting))
     
 def sumTwoNumbers(a, b):
     return a + b
@@ -190,6 +191,51 @@ functionWithArgs("john", "fuck you")
 
 w = sumTwoNumbers(2,3)
 print (w)
+
+#Classes and Objects------------------------------------------------------------------------------------------------------------------------------
+
+class MyClass:
+    Variable = "blah"
+    
+    def funck(self):
+        print ("This is the message inside the class")
+
+myObjectx = MyClass() #enitializes object 
+
+myObjectx.Variable # call to the variable
+# if you were to print this, it would print 'blah'
+
+# PRACTICE USING OBJECTS
+
+# define the Vehicle class
+class Vehicle:
+    name = ""
+    type = "car"
+    color = ""
+    value = 100.00
+    def description(self):
+        desc_str = "%s is a %s %s worth $%.2f" % (self.name, self.color, self.kind, self.value)
+        return desc_str
+
+
+car1 = Vehicle()
+car1.name = "Fer"
+car1.color = "red"
+car1.kind = "convertible"
+car1.value = 60000.00
+
+car2 = Vehicle()
+car2.name = "Jump"
+car2.color = "blue"
+car2.kind = "van"
+car2.value = 10000.00
+
+
+print (car1.description())
+print (car2.description())
+
+#Dictionaries---------------------------------------------------------------------------------------
+
 
 
 
