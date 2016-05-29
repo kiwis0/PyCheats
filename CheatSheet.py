@@ -267,5 +267,27 @@ for name, number in phoneBook.items():
 del phoneBook['John']
 #or 'phoneBook.pop("John")'
 
+#Generators-------------------------------------------------------------------------------------
 
+import random
+
+def lottery(): 
+    #returns 6 nums between 1 and 40
+    for i in xrange(6):
+        yield random.randint(1, 40)
+        
+    #returns a 7th number between 1 & 15
+    yield random.randint(1, 15)
+    
+for randNumber in lottery():
+    print "the next number is %d!" %randNumber
+
+#List Comprehension-----------------------------------
+
+sentence = "the quick brown fox jumps over the lasy dog"
+words = sentence.split()
+wordLength = []
+for word in words:
+    if word != "the":
+        wordLength.append(len(word))
 
