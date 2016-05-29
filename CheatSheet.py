@@ -40,7 +40,7 @@ print testString[3:7]#splices string from index 3 to 7 (lo w)
 print testString[:7]#splices string from begining to 7th index (hello w)
 print testString[3:]#splices string from 3rd index to end (lo world!)
 print testString[-3:]#splices string from 3rd index from the end to end (ld!)
-print testString[3:11:2]#splices stirng from 3rd to 7th but skips every other(l ol)
+print testString[3:11:2]#splices string from 3rd to 7th but skips every other(l ol)
 print testString[::-1]#reverses order of string
 
 print testString.upper()#string to all upper
@@ -50,7 +50,7 @@ print testString.upper()#string to all upper
 print testString.startswith("hello")# checks if string starts with 'hello'
 print testString.endswith("world!")#checks from right to left if strings are ==
 
-#Takes index with that value removes it and splits the string into sections around that indes with that value 
+#Takes index with that value removes it and splits the string into sections around that indexes with that value 
 newTest = testString.split("w")
 print (newTest)    
 
@@ -80,7 +80,8 @@ cubed = 2 ** 3
 # you can make a string equal to whatever is in "" times a multiple
 # you can also print things this way
 lotsOfHellos = "hello" * 10
-print "hey there " * 10# prints 'hey there '  ten times
+print "hey there\n" * 10#prints 'hey there '  ten times
+#'\n' makes a new line
 
 #conditons ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -178,7 +179,8 @@ for i in range(1,10):
         break
     print i
 else: 
-    print "this is not printed because for loop is terminated because of break but not due to fail in condition"
+    print "this is not printed because for loop is terminated\
+    because of break but not due to fail in condition"
 
 #Functions---------------------------------------------------------------------------------------------------------------------------------------
 def myFunction():
@@ -220,7 +222,8 @@ class Vehicle:
     color = ""
     value = 100.00
     def description(self):
-        desc_str = "%s is a %s %s worth $%.2f" % (self.name, self.color, self.kind, self.value)
+        desc_str = "%s is a %s %s worth $%.2f" % (self.name, self.color,
+                                                   self.kind, self.value)
         return desc_str
 
 
