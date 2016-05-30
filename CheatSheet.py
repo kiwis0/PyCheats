@@ -290,4 +290,60 @@ wordLength = []
 for word in words:
     if word != "the":
         wordLength.append(len(word))
+'''
+this notation is also acceptable
+
+sentence = "the quick brown fox jumps over the lazy dog"
+words = sentence.split()
+word_lengths = [len(word) for word in words if word != "the"]
+'''
+        
+#Mulitple Function arguments-------------------------------------------------------------------------
+
+def foo(first, second, third, *theRest):
+    print "first #: %s\n\
+second: %s\n\
+third: %s" %(first, second, third)
+    print "all the rest %s" %list(theRest)
+    
+foo(1,2,3,4,5)
+'''
+this will print 
+first #: 1
+second: 2
+third: 3
+all the rest [4, 5]
+'''
+
+#exmaple wiht keywords
+#there are precodition one knowing what the options may do
+def bar(first, second, third, **options):
+    if options.get("action") == "sum":
+        print "The sum is: %d" % (first + second + third)
+
+    if options.get("number") == "first":
+        return first
+
+result = bar(1, 2, 3, action = "sum", number = "first")
+print "Result: %d" % result
+
+#exception Handling----------------------------------------------------------
+#origonal by photonproton
+def sumUpTo(n):
+    '''recursive funtion that return sum of natural numbers 
+    up to n'''
+    if n == 1:
+        return n
+    else: 
+        return n + sumUpTo(n-1)
+    
+#taking input from user
+inputNumber = int(input("Enter a number:"))
+
+try:
+    sumUpTo(inputNumber)
+except RuntimeError: 
+    print "Value must 1 or more"
+#you must specify which error you would expect
+
 
