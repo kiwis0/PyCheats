@@ -218,7 +218,7 @@ myObjectx.Variable # call to the variable
 # define the Vehicle class
 class Vehicle:
     name = ""
-    type = "car"
+    kind = ""
     color = ""
     value = 100.00
     def description(self):
